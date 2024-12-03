@@ -1,0 +1,47 @@
+services:
+  api_back:
+    image: api_back:latest
+    build:
+      context: ./api-back
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api-back/data:/app/data
+    networks:
+      - api_biblio
+    environment:
+      - API_URL=http://api_back:5000
+
+  api_auth:
+    image: api_auth:latest
+    build:
+      context: ./api-auth
+      dockerfile: Dockerfile
+    ports:
+      - "5020:5020"
+    volumes:
+      - ./api-back/data:/app/data
+    networks:
+      - api_biblio
+    environment:
+      - API_URL=http://api_auth:5020
+
+  api_front:
+    image: api_front:latest
+    build:
+      context: ./api-front
+      dockerfile: Dockerfile
+    ports:
+      - "5010:5010"
+    volumes:
+      - ./api-back/data:/app/data
+    networks:
+      - api_biblio
+    environment:
+      - BACKEND_API_URL=http://api_back:5000
+      - AUTH_API_URL=http://api_auth:5020
+
+networks:
+  api_biblio:
+    driver: bridge

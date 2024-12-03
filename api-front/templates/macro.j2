@@ -1,0 +1,20 @@
+{% macro affichage_result(lst, col) %}
+    <table class="table table-bordered table-hover align-middle">
+        <thead style="background-color: #7f5027; color: white;">
+            <tr>
+                {% for i in col %}
+                    <th scope="col">{{ i }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for content in lst %}
+                <tr>
+                    {% for i in content %}
+                        <td>{{ content[i] }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endmacro %}

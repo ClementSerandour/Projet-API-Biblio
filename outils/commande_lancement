@@ -1,0 +1,2 @@
+docker build -t content .
+docker run -v "C:\Users\cleme\OneDrive\Documents\IUT R&T\DevOps - Mr Menguy\data:/app/data" -p 5000:5000 --name content content

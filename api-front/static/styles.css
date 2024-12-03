@@ -1,0 +1,187 @@
+/* Corps de la page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f0e6; /* Beige clair pour un fond chaleureux */
+    color: #3a2a1f; /* Marron foncé pour le texte */
+}
+
+/* Header */
+.site-header {
+    background: linear-gradient(90deg, #a77d58, #7f5027); /* Bandeau dans les teintes de marron */
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #7f5027; /* Bordure marquée en bas pour plus de distinction */
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2rem; /* Taille du titre adaptée */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #7f5027;
+    padding: 12px 0; /* Plus d'espace autour des éléments */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 3px solid #5e3823; /* Légère bordure pour la séparation */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    color: #f5ebe0;
+    transform: scale(1.05);
+}
+
+/* Marge entre la barre de navigation et le contenu principal */
+main {
+    margin-top: 40px; /* Augmenter la marge entre la navbar et le contenu principal */
+}
+
+/* Sections principales */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7f5027;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #a77d58;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Ajout d'un fond et d'une bordure pour les sections */
+section {
+    background-color: #fff; /* Fond blanc */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 30px 20px;
+    margin-bottom: 40px; /* Marge entre les sections */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    border: 2px solid #7f5027; /* Bordure marron autour du bloc complet */
+}
+
+/* Cartes */
+.card {
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.card-body {
+    text-align: center; /* Centrer le contenu des cartes */
+    font-size: 0.9rem; /* Taille réduite */
+}
+
+/* Formulaire */
+input[type="text"] {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+/* Boutons dans les sections */
+button {
+    background-color: #a77d58; /* Marron clair */
+    color: white;
+    border: 2px solid #7f5027; /* Bordure marron foncé */
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px; /* Espacement entre le formulaire et le bouton */
+}
+
+/* Ajout d'un fond pour rendre les sections plus distinctes */
+section {
+    background-color: #f5ebe0; /* Fond légèrement beige pour les sections */
+    border-radius: 10px; /* Coins arrondis plus marqués */
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition des éléments */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Réduction de la taille globale du bloc */
+.connexion-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #F5EBE0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #7f5027;
+}
+
+/* Uniformisation des champs */
+.connexion-section input[type="text"], 
+.connexion-section input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style du bouton similaire */
+.connexion-section button {
+    background-color: #a77d58;
+    color: white;
+    border: 2px solid #7f5027;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.connexion-section button:hover {
+    background-color: #7f5027;
+    transform: scale(1.05);
+}
+section {
+    animation: fadeIn 1s ease-out;
+}
